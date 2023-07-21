@@ -9,9 +9,13 @@ import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import Path from "path";
 import path from "path";
-
+import {fileURLToPath} from 'url';
 //configure env
 dotenv.config();
+
+//esmodule fix
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //databse config
 connectDB();
